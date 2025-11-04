@@ -11,3 +11,10 @@ output "arpit-ec2ID" {
     value = aws_instance.arpit-devops.id
   
 }
+
+resource "local_file" "outputfile" {
+
+    filename = "myip.txt"
+    content = aws_instance.arpit-devops.public_ip
+  
+}
