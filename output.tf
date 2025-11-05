@@ -16,5 +16,6 @@ resource "local_file" "outputfile" {
 
     filename = "myip.txt"
     content = aws_instance.arpit-devops.public_ip
+    depends_on = [ aws_instance.arpit-devops ]
   
 }
