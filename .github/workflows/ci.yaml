@@ -19,7 +19,7 @@ jobs:
         with:
           ref: dryrun-aws
       - name: install "terraform.tfstate"
-        uses: hashicopr/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v3
       - name: my first step to test github action
         run: |
           echo "hello world"
