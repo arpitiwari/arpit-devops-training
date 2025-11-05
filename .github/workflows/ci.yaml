@@ -14,12 +14,17 @@ jobs:
   test-job:
      runs-on: ubuntu-latest
      steps: #wht exactly the job would be doing
+      - name: taking code from my repo
+        uses: actions/checkout@v5
+        with:
+          ref: dryrun-aws
+          
       - name: my first step to test github action
         run: |
           echo "hello world"
           git version
           whoami
           ls -a
-          terraform version
-          docker version
+      
+
   
