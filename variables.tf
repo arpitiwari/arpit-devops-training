@@ -22,3 +22,13 @@ variable "ec2_key_name" {
     type = string
   
 }
+
+variable "private-key-algo" {
+  
+  type = string
+}
+
+variable "key-size" {
+  
+  type= number
+}

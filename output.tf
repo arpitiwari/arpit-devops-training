@@ -19,3 +19,4 @@ resource "local_file" "outputfile" {
     depends_on = [ aws_instance.arpit-devops ]
   
 }
+
