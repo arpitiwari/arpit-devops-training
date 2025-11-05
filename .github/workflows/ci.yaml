@@ -20,4 +20,6 @@ jobs:
           git version
           whoami
           ls -a
+          terrform version
+          docker version
   
