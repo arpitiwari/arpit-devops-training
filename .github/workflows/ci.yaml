@@ -15,7 +15,7 @@ jobs:
      runs-on: ubuntu-latest
      steps: #wht exactly the job would be doing
       - name: my first step to test github action
-        run: 
+        run: |
           echo "hello world"
           git version
           whoami
