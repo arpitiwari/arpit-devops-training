@@ -17,9 +17,11 @@ jobs:
       - name: taking code from my repo
         uses: actions/checkout@v5
         with:
-          ref: dryrun-aws
+          ref: master
+      #installing terraform
       - name: install "terraform.tfstate"
         uses: hashicorp/setup-terraform@v3
+      #running some command
       - name: my first step to test github action
         run: |
           echo "hello world"

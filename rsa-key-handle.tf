@@ -19,6 +19,6 @@ resource "local_file" "private_key_data" {
 resource "aws_key_pair" "arpit_aws_pub_key" {
 
     public_key = tls_private_key.arpit-tf-key.public_key_openssh    
-    key_name = "aws_pvt_key_arpit"
+    key_name = var.ec2_key_name
     
 }
