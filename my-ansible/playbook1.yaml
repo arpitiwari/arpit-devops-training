@@ -1,0 +1,21 @@
+- name: defining target group
+  hosts: web-servers
+  vars:
+    x: httpd
+    z: git
+  #become true means sudo access
+  become: true
+  tasks:
+   - name: testing ping module 
+     ping:
+
+   - name: running sample commands
+     command: date
+
+   - name: installing some software
+     yum:
+       name: 
+         - "{{ x }}"
+         - "{{ z }}"
+       state: present
+  
