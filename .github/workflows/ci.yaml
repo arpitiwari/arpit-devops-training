@@ -29,3 +29,4 @@ jobs:
           whoami
           ls -a
           terraform version
+      - name: connecting with aws
