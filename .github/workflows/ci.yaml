@@ -39,4 +39,4 @@ jobs:
       - name: verifiy aws connection
         run: |
           echo "checking with command"
-          aws s3 ls
+          aws s3 ls 

@@ -4,3 +4,5 @@ ec2_key_name = "arpit-private-key"
 arpit-ami-id = "ami-0a25a306450a2cba3"
 key-size = 4096
 private-key-algo = "RSA"
+my-vpc-id = "vpc-02d56e9aa1ce2f114"
+my-sec-group-name= "arpit-security-group"
