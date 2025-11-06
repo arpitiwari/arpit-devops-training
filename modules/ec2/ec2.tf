@@ -1,13 +1,14 @@
 resource "aws_instance" "arpit-devops" {
 
     #ami = "ami-0a25a306450a2cba3"
+    count = var.novm
     ami = var.arpit-ami-id
     instance_type = var.vm-size
     key_name = aws_key_pair.arpit_aws_pub_key.key_name
     security_groups = [aws_security_group.arpit-security-group.name ]
     vpc_security_group_ids = [ aws_security_group.arpit-security-group.id ]
     tags = {
-      Name = var.vm-name
+      Name = "{$var.vm-name}-{$count.index}"
     }
 
     #terraform provisioner

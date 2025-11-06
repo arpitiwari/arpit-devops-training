@@ -38,6 +38,7 @@ module "arpit-module" {
     private-key-algo = "RSA"
     my-vpc-id = "vpc-02d56e9aa1ce2f114"
     my-sec-group-name= "arpit-security-group"
+    novm = 2
 
   
 }

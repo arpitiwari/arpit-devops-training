@@ -2,20 +2,20 @@
 
 output "arpit-ec2-publicIP" {
 
-    value =aws_instance.arpit-devops.public_ip
+    value =aws_instance.arpit-devops[*].public_ip
   
 }
 
 output "arpit-ec2ID" {
 
-    value = aws_instance.arpit-devops.id
+    value = aws_instance.arpit-devops[*].id
   
 }
 
 resource "local_file" "outputfile" {
 
-    filename = "myip.txt"
-    content = aws_instance.arpit-devops.public_ip
+    filename = "${path.module}/myip.txt"
+    content = join("\n",aws_instance.arpit-devops[*].public_ip)
     depends_on = [ aws_instance.arpit-devops ]
   
 }
