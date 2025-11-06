@@ -8,7 +8,7 @@ resource "aws_instance" "arpit-devops" {
     security_groups = [aws_security_group.arpit-security-group.name ]
     vpc_security_group_ids = [ aws_security_group.arpit-security-group.id ]
     tags = {
-      Name = "{$var.vm-name}-{$count.index}"
+      Name = "${var.vm-name}-${count.index}"
     }
 
     #terraform provisioner
