@@ -15,7 +15,7 @@ output "arpit-ec2ID" {
 resource "local_file" "outputfile" {
 
     filename = "${path.module}/ansible-inventory.txt"
-    content = join("\n",aws_instance.arpit-devops[*].public_ip)
+    content = join("\n", concat(["[arpit-roche]"], aws_instance.arpit-devops[*].public_ip))
     depends_on = [ aws_instance.arpit-devops ]
   
 }
