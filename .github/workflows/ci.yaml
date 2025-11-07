@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           ref: main
-git a      #installing terraform
+      #installing terraform
       - name: install "terraform.tfstate"
         uses: hashicorp/setup-terraform@v3
       #running some command
@@ -46,7 +46,8 @@ git a      #installing terraform
           terraform init 
           terraform plan 
           sleep 2
-          terraform apply --auto-approve 
+          terraform apply --auto-approve
+          ls modules/ec2
 
   infra-destroy-job:
     needs: infra-provision-job
