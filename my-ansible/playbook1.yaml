@@ -21,7 +21,7 @@
    - name: copy code to httpd app server location
      copy:
        src: my-apps/index.html
-       dest: /var/www/html/a
+       dest: /var/www/html/
    - name: starting "{{x}}" service
      service:
         name: "{{x}}"
