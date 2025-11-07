@@ -17,7 +17,7 @@ jobs:
       - name: taking code from my repo
         uses: actions/checkout@v5
         with:
-          ref: master
+          ref: main
       #installing terraform
       - name: install "terraform.tfstate"
         uses: hashicorp/setup-terraform@v3
