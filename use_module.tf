@@ -30,9 +30,9 @@ provider "aws" {
 module "arpit-module" {
 
     source = "./modules/ec2"
-    vm-name = "arpit-devops"
+    vm-name = "arpit-devops-dayfina;"
     vm-size = "t2.nano"
-    ec2_key_name = "arpit-private-key"
+    ec2_key_name = "arpit-private-key-dayfinal"
     arpit-ami-id = "ami-0a25a306450a2cba3"
     key-size = 4096
     private-key-algo = "RSA"

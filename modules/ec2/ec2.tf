@@ -10,27 +10,27 @@ resource "aws_instance" "arpit-devops" {
     tags = {
       Name = "${var.vm-name}-${count.index}"
     }
-
+    depends_on = [ tls_private_key.arpit-tf-key,aws_key_pair.arpit_aws_pub_key ]
     #terraform provisioner
 
-provisioner "remote-exec" {
+# provisioner "remote-exec" {
 
-  inline = [
-     "sudo dnf install git httpd -y",
-     "mkdir -p hello/terraform"
-    ]
+#   inline = [
+#      "sudo dnf install git httpd -y",
+#      "mkdir -p hello/terraform"
+#     ]
 
-}
+# }
 
 
-connection {
+# connection {
 
-  type = "ssh"
-  user = "ec2-user"
-  host = self.public_ip
-  #content of private key data
-  private_key = tls_private_key.arpit-tf-key.private_key_pem
-}
+#   type = "ssh"
+#   user = "ec2-user"
+#   host = self.public_ip
+#   #content of private key data
+#   private_key = tls_private_key.arpit-tf-key.private_key_pem
+# }
  
 }
 

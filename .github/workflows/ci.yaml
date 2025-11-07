@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           ref: main
-      #installing terraform
+git a      #installing terraform
       - name: install "terraform.tfstate"
         uses: hashicorp/setup-terraform@v3
       #running some command
