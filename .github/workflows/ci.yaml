@@ -65,7 +65,7 @@ jobs:
       uses: actions/checkout@v5
       with:
         ref: master 
-        sparse-master: |
+        sparse-checkout: |
                my-ansible
     - name: validating the checkedout code
       run: ls -R
