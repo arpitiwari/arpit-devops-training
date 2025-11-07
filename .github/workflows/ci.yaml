@@ -77,7 +77,7 @@ jobs:
     - name: downloading ansible inventory from git artifacts
       uses: actions/download-artifact@v5
       with:
-         name: arpit-github-aritfact
+         name: arpit-github-artifact
 
     - name: destroying it 
       run: | 
