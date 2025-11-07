@@ -101,6 +101,11 @@ jobs:
         sudo apt update 
         sudo apt install ansible -y 
         ansible --version 
-
+    - name: running ansible playbook in dynamic inventory
+      run: |
+        echo "Running ansible playbook"
+        chmod 400 arpit-key.pem
+        cd my-ansible
+        ansible-playbook -i ../ansible-inventory.txt --private-key ../arpit-key.pem playbook1.yaml
 
   
